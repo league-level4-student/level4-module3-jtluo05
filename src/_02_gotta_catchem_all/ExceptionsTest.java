@@ -33,6 +33,15 @@ class ExceptionsTest {
 	@Test
 	public void testDivideByZeroException() {
 		
+		try {
+			ExceptionMethods.divide(4.0,2.0);
+			ExceptionMethods.divide(2.0, 0.0);
+			fail("IllegalArgumentException not thrown");
+		} catch (IllegalArgumentException e) {
+			System.out.println("IllegalArgumentException was thrown");
+		}
+		
+		
 	}
 	
 	//4. In the ExceptionMethods class, write a method called reverseString that takes a
@@ -42,6 +51,15 @@ class ExceptionsTest {
 	//5. Complete the JUnit test method to test the reverseStringMethod.
 	@Test
 	public void testReverseString() {
+		
+		try {
+			ExceptionMethods.reverseString("jordan");
+			ExceptionMethods.reverseString("");
+			fail("IllegalStateException not thrown");
+		} catch (IllegalStateException e) {
+			System.out.println("IllegalStateException was thrown");
+		}
+		
 		
 	}
 	
